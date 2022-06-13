@@ -10,7 +10,7 @@ from PIL import Image
 from multipage import MultiPage
 from pages import predict_page,explore_page,housepred
 
-from predict_page import show_predict_page
+from pages.predict_page import show_predict_page
 
 
 # Create an instance of the app 
