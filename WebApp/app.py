@@ -13,6 +13,7 @@ from multipage import MultiPage
 from pages.predict_page import show_predict_page
 from pages.explore_page import show_explore_page
 from pages.housepred import show_house_page
+
 # Create an instance of the app 
 app = MultiPage()
 
