@@ -8,7 +8,7 @@ from PIL import Image
 
 # Custom imports 
 from multipage import MultiPage
-from WebApp/pages import predict_page,explore_page,housepred
+from WebApp.pages import predict_page,explore_page,housepred
 
 from predict_page import show_predict_page
 
