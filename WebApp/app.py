@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-from pages.predict_page import show_predict_page
-
 #show_predict_page()
 from PIL import Image
 
@@ -11,6 +9,9 @@ from PIL import Image
 # Custom imports 
 from multipage import MultiPage
 from pages import predict_page,explore_page,housepred
+
+from predict_page import show_predict_page
+
 
 # Create an instance of the app 
 app = MultiPage()
