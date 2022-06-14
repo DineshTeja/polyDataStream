@@ -18,6 +18,7 @@ from sklearn.preprocessing import StandardScaler
 
 from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_percentage_error,mean_squared_error
 from PIL import Image
+import plotly.express as px
 
 
 
@@ -413,8 +414,6 @@ if yes:
 
     frames = [actDems, actReps]
     fActual = pd.concat(frames)
-
-    import plotly.express as px
 
     fig = px.choropleth(fActual,
                         locations='state_po', 
