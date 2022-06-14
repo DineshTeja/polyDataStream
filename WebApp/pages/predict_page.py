@@ -48,10 +48,23 @@ with col1:
 
 with col2:
     st.image(image,width=490)
-    st.image(image2,width=690)
+    
 
 with col3:
     st.write("")
+
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.write("")
+
+with col2:
+    st.image(image2,width=690)
+    
+with col3:
+    st.write("")
+
 
 results = st.container()
 actualResults = st.expander("View the actual election results")
