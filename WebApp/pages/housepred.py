@@ -9,6 +9,6 @@ from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_per
 from PIL import Image
 
 def show_house_page():
-    titleImage = Image.open('WebApp/images/ushousetitle.png')
+    titleImage2 = Image.open('WebApp/images/ushousetitle.png')
 
-    st.image(titleImage,width=690)
+    st.image(titleImage2,width=690)

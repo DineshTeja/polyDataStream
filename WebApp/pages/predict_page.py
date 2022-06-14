@@ -40,9 +40,9 @@ from PIL import Image
 
 def show_predict_page():
 
-    titleImage = Image.open('images/usprestitle.png')
+    #titleImage = Image.open('images/usprestitle.png')
 
-    st.image(titleImage,width=690)
+    #t.image(titleImage,width=690)
 
 
     #title = st.title("U.S. Presidential Election Prediction Model (1976 - 2020)")
