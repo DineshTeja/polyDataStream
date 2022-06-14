@@ -10,9 +10,7 @@ from PIL import Image
 #from multipage import MultiPage
 #from pages import predict_page,explore_page,housepred
 
-from pages.predict_page import show_predict_page
-from pages.explore_page import show_explore_page
-from pages.housepred import show_house_page
+
 
 ##import multipage
 #from multipage import MultiPage
@@ -33,6 +31,8 @@ with col2:
 
 with col3:
     st.write("")
+
+
     
 
 
