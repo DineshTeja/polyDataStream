@@ -39,7 +39,8 @@ import plotly.express as px
 #lblEncoder_gender = data['lblEncoder_gender']
 
 
-    
+image = Image.open('WebApp/images/polydatalogo.png')
+
 results = st.container()
 actualResults = st.expander("View the actual election results")
 
