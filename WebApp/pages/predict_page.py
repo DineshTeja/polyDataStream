@@ -44,10 +44,10 @@ actualResults = st.expander("View the actual election results")
 
 from pathlib import Path
 
-data = Path(__file__).parents[1] / 'WebApp/1976-2020-president.csv'
-electoral_df = Path(__file__).parents[1] / 'WebApp/Electoral_College.csv'
-#data = pd.read_csv(datapath)
-#electoral_df = pd.read_csv(electoral_dfpath)
+#data = Path(__file__).parents[1] / 'WebApp/1976-2020-president.csv'
+#electoral_df = Path(__file__).parents[1] / 'WebApp/Electoral_College.csv'
+data = pd.read_csv('1976-2020-president.csv')
+electoral_df = pd.read_csv('Electoral_College.csv')
 
 
 
