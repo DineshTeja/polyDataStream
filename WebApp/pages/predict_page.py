@@ -48,7 +48,7 @@ with col1:
 
 with col2:
     st.image(image,width=490)
-    st.image(image2,width=490)
+    st.image(image2,width=690)
 
 with col3:
     st.write("")
