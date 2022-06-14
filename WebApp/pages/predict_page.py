@@ -39,8 +39,6 @@ from PIL import Image
 
 
 def show_predict_page():
-
-    #title = st.title("U.S. Presidential Election Prediction Model (1976 - 2020)")
     results = st.container()
     actualResults = st.expander("View the actual election results")
 
