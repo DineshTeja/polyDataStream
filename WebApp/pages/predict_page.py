@@ -41,6 +41,18 @@ import plotly.express as px
 
 image = Image.open('WebApp/images/polydatalogo.png')
 
+col1, col2, col3 = st.columns([1,6,1])
+
+with col1:
+    st.write("")
+
+with col2:
+    st.image(image,width=490)
+        
+
+with col3:
+    st.write("")
+
 results = st.container()
 actualResults = st.expander("View the actual election results")
 
