@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import pickle
 
@@ -5,25 +7,35 @@ import numpy as np
 import pandas as pd
 import sklearn
 
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import MinMaxScaler
+#from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+#from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import StandardScaler
+
+
 from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_percentage_error,mean_squared_error
 from PIL import Image
 
 
-def load_model():
-    with open('saved_steps.pkl', 'rb') as file:
-        data = pickle.load(file)
-    return data
 
-data = load_model()
+#def load_model():
+#    with open('saved_steps.pkl', 'rb') as file:
+#        data = pickle.load(file)
+#    return data
 
-model_loaded = data['model']
-scaler_loaded = data['scaler']
-lblEncoder_state = data['lblEncoder_state']
-lblEncoder_cons = data['lblEncoder_cons']
-lblEncoder_name = data['lblEncoder_name']
-lblEncoder_party = data['lblEncoder_party']
-lblEncoder_symbol = data['lblEncoder_symbol']
-lblEncoder_gender = data['lblEncoder_gender']
+#data = load_model()
+
+#model_loaded = data['model']
+#scaler_loaded = data['scaler']
+#lblEncoder_state = data['lblEncoder_state']
+#lblEncoder_cons = data['lblEncoder_cons']
+#lblEncoder_name = data['lblEncoder_name']
+#lblEncoder_party = data['lblEncoder_party']
+#lblEncoder_symbol = data['lblEncoder_symbol']
+#lblEncoder_gender = data['lblEncoder_gender']
 
 
 def show_predict_page():
@@ -295,17 +307,41 @@ def show_predict_page():
         X = ['state','state_cen','state_ic','party_detailed','office','writein']
         y = ['winner']
 
+        #data['state'] = lblEncoder_state.transform(data['state'])
+
+        #data['state_cen'] =lblEncoder_cons.transform(data['state_cen'])
+
+        #data['state_ic'] =lblEncoder_name.transform(data['state_ic'])
+
+        #data['party_detailed'] =lblEncoder_party.transform(data['party_detailed'])
+
+        #data['office'] =lblEncoder_symbol.transform(data['office'])
+
+        #data['writein'] =lblEncoder_gender.transform(data['writein'])
+
+        lblEncoder_state = LabelEncoder()
+        lblEncoder_state.fit(data['state'])
         data['state'] = lblEncoder_state.transform(data['state'])
 
-        data['state_cen'] =lblEncoder_cons.transform(data['state_cen'])
+        lblEncoder_cons = LabelEncoder()
+        lblEncoder_cons.fit(data['state_cen'])
+        data['state_cen'] = lblEncoder_cons.transform(data['state_cen'])
 
-        data['state_ic'] =lblEncoder_name.transform(data['state_ic'])
+        lblEncoder_name = LabelEncoder()
+        lblEncoder_name.fit(data['state_ic'])
+        data['state_ic'] = lblEncoder_name.transform(data['state_ic'])
 
-        data['party_detailed'] =lblEncoder_party.transform(data['party_detailed'])
+        lblEncoder_party = LabelEncoder()
+        lblEncoder_party.fit(data['party_detailed'])
+        data['party_detailed'] = lblEncoder_party.transform(data['party_detailed'])
 
-        data['office'] =lblEncoder_symbol.transform(data['office'])
+        lblEncoder_symbol = LabelEncoder()
+        lblEncoder_symbol.fit(data['office'])
+        data['office'] = lblEncoder_symbol.transform(data['office'])
 
-        data['writein'] =lblEncoder_gender.transform(data['writein'])
+        lblEncoder_gender = LabelEncoder()
+        lblEncoder_gender.fit(data['writein'])
+        data['writein'] = lblEncoder_gender.transform(data['writein'])
 
         y = ['winner']
         X = ['state','state_cen','state_ic','party_detailed','office','writein']
@@ -343,11 +379,17 @@ def show_predict_page():
 
         #inpDataScaled = scaler_loaded.transform(preData[X])
 
-        Xtrain_scaled = scaler_loaded.fit_transform(X_train)
-        Xtest_scaled = scaler_loaded.transform(X_test)
-        model_loaded.fit(Xtrain_scaled, y_train)
+        #Xtrain_scaled = scaler_loaded.fit_transform(X_train)
+        #Xtest_scaled = scaler_loaded.transform(X_test)
+        #model_loaded.fit(Xtrain_scaled, y_train)
 
-        prediction = model_loaded.predict(Xtest_scaled)
+        scaler = StandardScaler()
+        Xtrain_scaled = scaler.fit_transform(X_train)
+        Xtest_scaled = scaler.transform(X_test)
+        rf_model = RandomForestRegressor(n_estimators = 200, min_samples_split = 10, max_features = 'auto')
+        rf_model.fit(Xtrain_scaled, y_train)
+
+        prediction = rf_model.predict(Xtest_scaled)
 
         alteredPred = []
 
@@ -517,3 +559,5 @@ def show_predict_page():
 
        # st.plotly_chart(fig2, use_container_width=False, sharing="streamlit")
        # st.plotly_chart(fig, use_container_width=False, sharing="streamlit")
+
+
