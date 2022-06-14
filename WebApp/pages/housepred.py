@@ -8,5 +8,4 @@ import sklearn
 from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_percentage_error,mean_squared_error
 from PIL import Image
 
-def show_house_page():
-    st.text('ee')
+st.text('ee')
