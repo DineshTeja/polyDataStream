@@ -20,6 +20,7 @@ from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_per
 from PIL import Image
 import plotly.express as px
 
+st.sidebar.success("Select a demo above.")
 
 
 #def load_model():
