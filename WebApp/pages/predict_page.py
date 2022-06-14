@@ -40,7 +40,7 @@ import plotly.express as px
 
 
 image = Image.open('WebApp/images/polydatalogo.png')
-
+image2 = Image.open('WebApp/images/usprestitle.png')
 col1, col2, col3 = st.columns([1,6,1])
 
 with col1:
@@ -48,7 +48,7 @@ with col1:
 
 with col2:
     st.image(image,width=490)
-        
+    st.image(image2,width=490)
 
 with col3:
     st.write("")
