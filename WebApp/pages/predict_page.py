@@ -40,7 +40,7 @@ from PIL import Image
 
 def show_predict_page():
 
-    titleImage = Image.open('images/usprestitle.png')
+    titleImage = Image.open('WebApp/images/usprestitle.png')
 
     st.image(titleImage,width=690)
 

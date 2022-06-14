@@ -18,7 +18,7 @@ from pages.housepred import show_house_page
 app = MultiPage()
 
 # Title of the main page
-image = Image.open('images/polydatalogo.png')
+image = Image.open('WebApp/images/polydatalogo.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
