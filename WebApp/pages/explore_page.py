@@ -11,5 +11,4 @@ from PIL import Image
 
 
 def show_explore_page():
-
     st.text('dd')
