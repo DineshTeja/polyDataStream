@@ -32,7 +32,6 @@ with col2:
 with col3:
     st.write("")
 
-st.sidebar.success("Select a demo above.")
 
 
     
