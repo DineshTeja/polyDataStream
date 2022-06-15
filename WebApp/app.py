@@ -33,8 +33,9 @@ with col3:
     st.write("")
 
 
-
+image = Image.open('WebApp/images/predHeader.png')
     
+st.image(image,width=690)
 
 
 # Add all your applications (pages) here
