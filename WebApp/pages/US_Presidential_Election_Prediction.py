@@ -21,7 +21,6 @@ from PIL import Image
 import plotly.express as px
 
 st.set_page_config(page_title="Presidential Election", page_icon="📈")
-st.sidebar.success("Select a demo above.")
 
 
 #def load_model():
