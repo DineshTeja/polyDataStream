@@ -60,6 +60,10 @@ with col2:
             
     st.image(image3,width=400)
 
+    image4 = Image.open('WebApp/images/arkdems.png')
+            
+    st.image(image3,width=400)
+
 
 
 
