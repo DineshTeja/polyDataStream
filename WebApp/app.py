@@ -58,11 +58,11 @@ with col1:
 with col2:
     image3 = Image.open('WebApp/images/mitElection.png')
             
-    st.image(image3,width=400)
+    st.image(image3,width=360)
 
     image4 = Image.open('WebApp/images/arkdems.png')
             
-    st.image(image4,width=315)
+    st.image(image4,width=300)
 
 
 
