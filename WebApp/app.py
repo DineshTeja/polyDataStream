@@ -52,7 +52,7 @@ st.image(image,width=290)
 
 image3 = Image.open('WebApp/images/electoralHead.png')
         
-st.image(image3,width=400)
+st.image(image3,width=290)
 
 image2 = Image.open('WebApp/images/polyDataPredHeaderNew.png')
         
