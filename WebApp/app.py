@@ -62,7 +62,7 @@ with col2:
 
     image4 = Image.open('WebApp/images/arkdems.png')
             
-    st.image(image3,width=400)
+    st.image(image4,width=400)
 
 
 
