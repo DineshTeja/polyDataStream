@@ -18,25 +18,25 @@ from PIL import Image
 #app = MultiPage()
 
 # Title of the main page
-image = Image.open('WebApp/images/polydatalogo.png')
+#image = Image.open('WebApp/images/polydatalogo.png')
 
-col1, col2, col3 = st.columns([1,6,1])
+#col1, col2, col3 = st.columns([1,6,1])
 
 #img_style = {'width': '50%'}
-with col1:
-    st.write("")
+#with col1:
+#    st.write("")
 
-with col2:
-   st.image(image, width=490)
+#with col2:
+#   st.image(image, width=490)
         
 
-with col3:
-    st.write("")
+#with col3:
+#    st.write("")
 
 
-image = Image.open('WebApp/images/predHeader.png')
+#image = Image.open('WebApp/images/predHeader.png')
     
-st.image(image,width=690)
+#st.image(image,width=690)
 
 
 # Add all your applications (pages) here
@@ -48,4 +48,5 @@ st.image(image,width=690)
 # The main app
 #app.run()
 #st.image(image,width=490)
-#st.title('Prediction Model Demos')
+st.title('PolyData Federal Election Prediction Model Demos')
+st.header('Check Side Menu to Switch Demos')
