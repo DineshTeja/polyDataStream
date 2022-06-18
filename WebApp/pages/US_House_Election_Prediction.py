@@ -8,22 +8,21 @@ import sklearn
 from sklearn.metrics import accuracy_score,mean_absolute_error,mean_absolute_percentage_error,mean_squared_error
 from PIL import Image
 
-"""
-image = Image.open('WebApp/images/polydatalogo.png')
-image2 = Image.open('WebApp/images/ushousetitle.png')
-col1, col2, col3 = st.columns([1,6,1])
+#image = Image.open('WebApp/images/polydatalogo.png')
+#image2 = Image.open('WebApp/images/ushousetitle.png')
+#col1, col2, col3 = st.columns([1,6,1])
 
-with col1:
-    st.write("")
+#with col1:
+#    st.write("")
 
-with col2:
-    st.image(image,width=490)
+#with col2:
+#    st.image(image,width=490)
     
 
-with col3:
-    st.write("")
+#with col3:
+#    st.write("")
 
-st.image(image2,width=690)
-"""
+#st.image(image2,width=690)
+
 
 st.title('PolyData U.S. House Election Prediction Model Demo')
