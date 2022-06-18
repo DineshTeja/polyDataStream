@@ -58,7 +58,7 @@ with col1:
 with col2:
     image3 = Image.open('WebApp/images/voterBox.png')
             
-    st.image(image3,width=200)
+    st.image(image3,width=190)
 
 
 
