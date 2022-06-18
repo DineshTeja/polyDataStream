@@ -26,7 +26,7 @@ with col1:
     st.write("")
 
 with col2:
-   st.image(image,width=490)
+   st.image(image,width='50%')
         
 
 with col3:
