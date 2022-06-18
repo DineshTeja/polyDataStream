@@ -22,11 +22,13 @@ image = Image.open('WebApp/images/polydatalogo.png')
 
 col1, col2, col3 = st.columns([1,6,1])
 
+img_style = {'width': '50%'}
 with col1:
     st.write("")
 
 with col2:
-   st.image(image,width='50%')
+   st.image(image, style= img_style)
+   #width=490)
         
 
 with col3:
