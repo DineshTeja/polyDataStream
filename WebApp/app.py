@@ -20,22 +20,22 @@ from PIL import Image
 # Title of the main page
 image = Image.open('WebApp/images/polydatalogo.png')
 
-#col1, col2, col3 = st.columns([1,6,1])
+col1, col2, col3 = st.columns([1,6,1])
 
-#with col1:
- #   st.write("")
+with col1:
+    st.write("")
 
-#with col2:
-#    st.image(image,width=490)
+with col2:
+   st.image(image,width=490)
         
 
-#with col3:
- #   st.write("")
+with col3:
+    st.write("")
 
 
-#image = Image.open('WebApp/images/predHeader.png')
+image = Image.open('WebApp/images/predHeader.png')
     
-#st.image(image,width=690)
+st.image(image,width=690)
 
 
 # Add all your applications (pages) here
@@ -46,5 +46,5 @@ image = Image.open('WebApp/images/polydatalogo.png')
 
 # The main app
 #app.run()
-st.image(image,width=490)
-st.title('Prediction Model Demos')
+#st.image(image,width=490)
+#st.title('Prediction Model Demos')
