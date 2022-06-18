@@ -18,7 +18,7 @@ from PIL import Image
 #app = MultiPage()
 
 # Title of the main page
-#image = Image.open('WebApp/images/polydatalogo.png')
+image = Image.open('WebApp/images/polydatalogo.png')
 
 #col1, col2, col3 = st.columns([1,6,1])
 
@@ -47,6 +47,6 @@ from PIL import Image
 
 # The main app
 #app.run()
-#st.image(image,width=490)
+st.image(image,width=190)
 st.title('PolyData Federal Election Prediction Model Demos')
 st.header('Check Side Menu to Switch Demos')
