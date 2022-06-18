@@ -56,7 +56,7 @@ with col1:
         
     st.image(image2,width=310)
 with col2:
-    image3 = Image.open('WebApp/images/electoralHead2.png')
+    image3 = Image.open('WebApp/images/voterBox.png')
             
     st.image(image3,width=360)
 
