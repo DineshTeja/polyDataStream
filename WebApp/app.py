@@ -47,9 +47,19 @@ image = Image.open('WebApp/images/polydatalogo.png')
 
 # The main app
 #app.run()
-st.image(image,width=290)
-image2 = Image.open('WebApp/images/polyDataPredHeaderNew.png')
+col1, col2 = st.columns(2)
+with col1:
+    st.image(image,width=290)
+    image2 = Image.open('WebApp/images/polyDataPredHeaderNew.png')
+        
+    st.image(image2,width=310)
+
+with col2:
+    image3 = Image.open('WebApp/images/electoralHead.png')
+        
+    st.image(image3,width=290)
+
     
-st.image(image2,width=310)
+
 #st.title(' Federal Election Prediction Model Demos')
 #st.header(' Check Side Menu to Switch Demos')
