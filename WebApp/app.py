@@ -5,6 +5,9 @@ import pandas as pd
 #show_predict_page()
 from PIL import Image
 
+import mimetypes
+
+mimetypes.add_type("text/python", ".py", True)
 
 # Custom imports 
 #from multipage import MultiPage
